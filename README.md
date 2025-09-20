@@ -30,7 +30,6 @@ This ML pipeline provides an end-to-end solution for machine learning workflows,
 - **Model Evaluation**: Comprehensive metrics and validation procedures
 - **Deployment Ready**: Easy deployment to various platforms
 - **Monitoring & Logging**: Real-time performance monitoring and logging
-- **Reproducible Results**: Version control for data, code, and models
 - **Scalable Architecture**: Designed to handle large datasets and complex models
 
 ## Project Structure
@@ -84,9 +83,7 @@ ml_pipeline/
 │   ├── trained_models/
 │   └── model_artifacts/
 ├── logs/
-├── docker/
-│   ├── Dockerfile
-│   └── docker-compose.yml
+│ 
 └── scripts/
     ├── run_pipeline.py
     ├── train.py
@@ -123,13 +120,6 @@ pip install -r requirements.txt
 4. Install the package in development mode:
 ```bash
 pip install -e .
-```
-
-### Docker Installation
-
-```bash
-docker build -t ml-pipeline .
-docker run -v $(pwd)/data:/app/data -v $(pwd)/models:/app/models ml-pipeline
 ```
 
 ## Usage
@@ -291,26 +281,6 @@ comparator.plot_comparison(results)
 ```bash
 python scripts/deploy.py --model models/trained_models/best_model.pkl --port 8000
 ```
-
-### Docker Deployment
-
-```bash
-docker-compose up -d
-```
-
-### Cloud Deployment
-
-Support for AWS SageMaker, Google Cloud AI Platform, and Azure ML.
-
-## Monitoring
-
-### Performance Monitoring
-
-- Model drift detection
-- Data drift monitoring  
-- Performance degradation alerts
-- Real-time metrics dashboard
-
 ### Logging
 
 All pipeline activities are logged with different levels:
@@ -363,12 +333,6 @@ pytest tests/test_utils.py
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-### Code Style
-
-- Follow PEP 8 guidelines
-- Use type hints where appropriate
-- Add docstrings to all functions and classes
-- Write unit tests for new features
 
 ## Troubleshooting
 
@@ -391,10 +355,6 @@ pytest tests/test_utils.py
 - Model training and evaluation
 - Basic deployment support
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Thanks to the open-source community for the amazing ML libraries
@@ -404,7 +364,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 - **Author**: Sobhan
-- **Email**: [Your Email]
+- **Email**: [pandasobhan22@gmail.com]
 - **GitHub**: [@sobhan2204](https://github.com/sobhan2204)
 - **Issues**: [GitHub Issues](https://github.com/sobhan2204/ml_pipeline/issues)
 
